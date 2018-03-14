@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		520CBB049B01FE9B41EAF001 /* Pods_LearnBySongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */; };
+		FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A492058BA6400D1E949 /* AppDelegate.swift */; };
+		FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A4B2058BA6400D1E949 /* ViewController.swift */; };
+		FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A4D2058BA6400D1E949 /* Main.storyboard */; };
+		FDA47A512058BA6400D1E949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A502058BA6400D1E949 /* Assets.xcassets */; };
+		FDA47A542058BA6400D1E949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A522058BA6400D1E949 /* LaunchScreen.storyboard */; };
+		FDA47A5C2058BAA500D1E949 /* SubtitlesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A5B2058BAA500D1E949 /* SubtitlesHandler.swift */; };
+		FDA47A612058BB4B00D1E949 /* trailer_720p.srt in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A5F2058BB4B00D1E949 /* trailer_720p.srt */; };
+		FDA47A622058BB4B00D1E949 /* trailer_720p.mov in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A602058BB4B00D1E949 /* trailer_720p.mov */; };
+		FDA47A682058BCF300D1E949 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A672058BCF300D1E949 /* SplashVC.swift */; };
+		FDA47A6A2058BD0700D1E949 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A692058BD0700D1E949 /* LoginVC.swift */; };
+		FDA47A6C2058BD3500D1E949 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A6B2058BD3500D1E949 /* Constant.swift */; };
+		FDA47A6E2058BD4A00D1E949 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A6D2058BD4A00D1E949 /* Utils.swift */; };
+		FDA47A702058BDEF00D1E949 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A6F2058BDEF00D1E949 /* GlobalVariables.swift */; };
+		FDA47A722058BE5600D1E949 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A712058BE5600D1E949 /* MainVC.swift */; };
+		FDA47A752058C3A800D1E949 /* RoundUIViewCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A732058C3A800D1E949 /* RoundUIViewCorner.swift */; };
+		FDA47A762058C3A800D1E949 /* RoundButtonCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A742058C3A800D1E949 /* RoundButtonCorner.swift */; };
+		FDA47A782058CFC500D1E949 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A772058CFC500D1E949 /* GoogleService-Info.plist */; };
+		FDA47A7A2058D46100D1E949 /* UserManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A792058D46100D1E949 /* UserManagement.swift */; };
+		FDA47A7C2058E55200D1E949 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A7B2058E55200D1E949 /* RealmServices.swift */; };
+		FDA47A802058EBBB00D1E949 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A7F2058EBBB00D1E949 /* UserData.swift */; };
+		FDA47A822058ED6E00D1E949 /* VideoManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A812058ED6E00D1E949 /* VideoManagement.swift */; };
+		FDA47A842058FD9100D1E949 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A832058FD9100D1E949 /* VideoData.swift */; };
+		FDA47A8620590B9000D1E949 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A8520590B9000D1E949 /* SideMenuVC.swift */; };
+		FDA47A8920590BB700D1E949 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A8820590BB700D1E949 /* SideMenuCell.swift */; };
+		FDA47A8B20590EA500D1E949 /* ExSlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A8A20590EA500D1E949 /* ExSlideMenuController.swift */; };
+		FDA47A8D20590ECF00D1E949 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A8C20590ECE00D1E949 /* UIApplication.swift */; };
+		FDA47A8F20590EDF00D1E949 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A8E20590EDF00D1E949 /* UIViewController.swift */; };
+		FDA47A932059189800D1E949 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A922059189800D1E949 /* BaseVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D3107B44C5C06A2758E4443 /* Pods-LearnBySongs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnBySongs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs.debug.xcconfig"; sourceTree = "<group>"; };
+		324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnBySongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07E91C25C2CC252FD7B39A2 /* Pods-LearnBySongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnBySongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs.release.xcconfig"; sourceTree = "<group>"; };
+		FDA47A462058BA6400D1E949 /* LearnBySongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnBySongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA47A492058BA6400D1E949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDA47A4B2058BA6400D1E949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDA47A4E2058BA6400D1E949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDA47A502058BA6400D1E949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDA47A532058BA6400D1E949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDA47A552058BA6400D1E949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA47A5B2058BAA500D1E949 /* SubtitlesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitlesHandler.swift; sourceTree = "<group>"; };
+		FDA47A5F2058BB4B00D1E949 /* trailer_720p.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trailer_720p.srt; sourceTree = "<group>"; };
+		FDA47A602058BB4B00D1E949 /* trailer_720p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = trailer_720p.mov; sourceTree = "<group>"; };
+		FDA47A672058BCF300D1E949 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		FDA47A692058BD0700D1E949 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FDA47A6B2058BD3500D1E949 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		FDA47A6D2058BD4A00D1E949 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FDA47A6F2058BDEF00D1E949 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		FDA47A712058BE5600D1E949 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		FDA47A732058C3A800D1E949 /* RoundUIViewCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundUIViewCorner.swift; sourceTree = "<group>"; };
+		FDA47A742058C3A800D1E949 /* RoundButtonCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButtonCorner.swift; sourceTree = "<group>"; };
+		FDA47A772058CFC500D1E949 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDA47A792058D46100D1E949 /* UserManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagement.swift; sourceTree = "<group>"; };
+		FDA47A7B2058E55200D1E949 /* RealmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
+		FDA47A7F2058EBBB00D1E949 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FDA47A812058ED6E00D1E949 /* VideoManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManagement.swift; sourceTree = "<group>"; };
+		FDA47A832058FD9100D1E949 /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
+		FDA47A8520590B9000D1E949 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		FDA47A8820590BB700D1E949 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		FDA47A8A20590EA500D1E949 /* ExSlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSlideMenuController.swift; sourceTree = "<group>"; };
+		FDA47A8C20590ECE00D1E949 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		FDA47A8E20590EDF00D1E949 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		FDA47A922059189800D1E949 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDA47A432058BA6400D1E949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520CBB049B01FE9B41EAF001 /* Pods_LearnBySongs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF2086AAEDE5D5203F241C9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D3107B44C5C06A2758E4443 /* Pods-LearnBySongs.debug.xcconfig */,
+				B07E91C25C2CC252FD7B39A2 /* Pods-LearnBySongs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC4827B7E2258026AF9EDBB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDA47A3D2058BA6400D1E949 = {
+			isa = PBXGroup;
+			children = (
+				FDA47A482058BA6400D1E949 /* LearnBySongs */,
+				FDA47A472058BA6400D1E949 /* Products */,
+				BF2086AAEDE5D5203F241C9F /* Pods */,
+				DC4827B7E2258026AF9EDBB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDA47A472058BA6400D1E949 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A462058BA6400D1E949 /* LearnBySongs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDA47A482058BA6400D1E949 /* LearnBySongs */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A662058BCAD00D1E949 /* Utils */,
+				FDA47A652058BCA000D1E949 /* Controller */,
+				FDA47A642058BC9B00D1E949 /* Model */,
+				FDA47A632058BC9600D1E949 /* View */,
+				FDA47A5E2058BB3100D1E949 /* Example */,
+				FDA47A5D2058BAAA00D1E949 /* Extension */,
+				FDA47A492058BA6400D1E949 /* AppDelegate.swift */,
+				FDA47A4B2058BA6400D1E949 /* ViewController.swift */,
+				FDA47A502058BA6400D1E949 /* Assets.xcassets */,
+				FDA47A552058BA6400D1E949 /* Info.plist */,
+				FDA47A772058CFC500D1E949 /* GoogleService-Info.plist */,
+			);
+			path = LearnBySongs;
+			sourceTree = "<group>";
+		};
+		FDA47A5D2058BAAA00D1E949 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A8E20590EDF00D1E949 /* UIViewController.swift */,
+				FDA47A8C20590ECE00D1E949 /* UIApplication.swift */,
+				FDA47A8A20590EA500D1E949 /* ExSlideMenuController.swift */,
+				FDA47A742058C3A800D1E949 /* RoundButtonCorner.swift */,
+				FDA47A732058C3A800D1E949 /* RoundUIViewCorner.swift */,
+				FDA47A5B2058BAA500D1E949 /* SubtitlesHandler.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FDA47A5E2058BB3100D1E949 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A602058BB4B00D1E949 /* trailer_720p.mov */,
+				FDA47A5F2058BB4B00D1E949 /* trailer_720p.srt */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		FDA47A632058BC9600D1E949 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A4D2058BA6400D1E949 /* Main.storyboard */,
+				FDA47A522058BA6400D1E949 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDA47A642058BC9B00D1E949 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A7F2058EBBB00D1E949 /* UserData.swift */,
+				FDA47A832058FD9100D1E949 /* VideoData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDA47A652058BCA000D1E949 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A8720590B9600D1E949 /* SideMenu */,
+				FDA47A672058BCF300D1E949 /* SplashVC.swift */,
+				FDA47A692058BD0700D1E949 /* LoginVC.swift */,
+				FDA47A712058BE5600D1E949 /* MainVC.swift */,
+				FDA47A922059189800D1E949 /* BaseVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FDA47A662058BCAD00D1E949 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A6B2058BD3500D1E949 /* Constant.swift */,
+				FDA47A6D2058BD4A00D1E949 /* Utils.swift */,
+				FDA47A6F2058BDEF00D1E949 /* GlobalVariables.swift */,
+				FDA47A792058D46100D1E949 /* UserManagement.swift */,
+				FDA47A812058ED6E00D1E949 /* VideoManagement.swift */,
+				FDA47A7B2058E55200D1E949 /* RealmServices.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDA47A8720590B9600D1E949 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A8520590B9000D1E949 /* SideMenuVC.swift */,
+				FDA47A8820590BB700D1E949 /* SideMenuCell.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDA47A452058BA6400D1E949 /* LearnBySongs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA47A582058BA6400D1E949 /* Build configuration list for PBXNativeTarget "LearnBySongs" */;
+			buildPhases = (
+				B01BADA25FCDEA70769D14EE /* [CP] Check Pods Manifest.lock */,
+				FDA47A422058BA6400D1E949 /* Sources */,
+				FDA47A432058BA6400D1E949 /* Frameworks */,
+				FDA47A442058BA6400D1E949 /* Resources */,
+				8F6C7591ECDDBACE1AF89D85 /* [CP] Embed Pods Frameworks */,
+				77EF3B01CFAE144CE7380C0D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnBySongs;
+			productName = LearnBySongs;
+			productReference = FDA47A462058BA6400D1E949 /* LearnBySongs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDA47A3E2058BA6400D1E949 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Oluxe;
+				TargetAttributes = {
+					FDA47A452058BA6400D1E949 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FDA47A412058BA6400D1E949 /* Build configuration list for PBXProject "LearnBySongs" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDA47A3D2058BA6400D1E949;
+			productRefGroup = FDA47A472058BA6400D1E949 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDA47A452058BA6400D1E949 /* LearnBySongs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDA47A442058BA6400D1E949 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA47A542058BA6400D1E949 /* LaunchScreen.storyboard in Resources */,
+				FDA47A512058BA6400D1E949 /* Assets.xcassets in Resources */,
+				FDA47A612058BB4B00D1E949 /* trailer_720p.srt in Resources */,
+				FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */,
+				FDA47A622058BB4B00D1E949 /* trailer_720p.mov in Resources */,
+				FDA47A782058CFC500D1E949 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77EF3B01CFAE144CE7380C0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F6C7591ECDDBACE1AF89D85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B01BADA25FCDEA70769D14EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnBySongs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDA47A422058BA6400D1E949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA47A752058C3A800D1E949 /* RoundUIViewCorner.swift in Sources */,
+				FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */,
+				FDA47A682058BCF300D1E949 /* SplashVC.swift in Sources */,
+				FDA47A932059189800D1E949 /* BaseVC.swift in Sources */,
+				FDA47A802058EBBB00D1E949 /* UserData.swift in Sources */,
+				FDA47A822058ED6E00D1E949 /* VideoManagement.swift in Sources */,
+				FDA47A8920590BB700D1E949 /* SideMenuCell.swift in Sources */,
+				FDA47A702058BDEF00D1E949 /* GlobalVariables.swift in Sources */,
+				FDA47A7C2058E55200D1E949 /* RealmServices.swift in Sources */,
+				FDA47A8D20590ECF00D1E949 /* UIApplication.swift in Sources */,
+				FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */,
+				FDA47A722058BE5600D1E949 /* MainVC.swift in Sources */,
+				FDA47A762058C3A800D1E949 /* RoundButtonCorner.swift in Sources */,
+				FDA47A7A2058D46100D1E949 /* UserManagement.swift in Sources */,
+				FDA47A842058FD9100D1E949 /* VideoData.swift in Sources */,
+				FDA47A8F20590EDF00D1E949 /* UIViewController.swift in Sources */,
+				FDA47A6E2058BD4A00D1E949 /* Utils.swift in Sources */,
+				FDA47A5C2058BAA500D1E949 /* SubtitlesHandler.swift in Sources */,
+				FDA47A8620590B9000D1E949 /* SideMenuVC.swift in Sources */,
+				FDA47A6A2058BD0700D1E949 /* LoginVC.swift in Sources */,
+				FDA47A6C2058BD3500D1E949 /* Constant.swift in Sources */,
+				FDA47A8B20590EA500D1E949 /* ExSlideMenuController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FDA47A4D2058BA6400D1E949 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDA47A4E2058BA6400D1E949 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDA47A522058BA6400D1E949 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDA47A532058BA6400D1E949 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDA47A562058BA6400D1E949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDA47A572058BA6400D1E949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDA47A592058BA6400D1E949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3107B44C5C06A2758E4443 /* Pods-LearnBySongs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YLSK83HY4;
+				INFOPLIST_FILE = LearnBySongs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Longnh.LearnBySongs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDA47A5A2058BA6400D1E949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B07E91C25C2CC252FD7B39A2 /* Pods-LearnBySongs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YLSK83HY4;
+				INFOPLIST_FILE = LearnBySongs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Longnh.LearnBySongs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDA47A412058BA6400D1E949 /* Build configuration list for PBXProject "LearnBySongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA47A562058BA6400D1E949 /* Debug */,
+				FDA47A572058BA6400D1E949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA47A582058BA6400D1E949 /* Build configuration list for PBXNativeTarget "LearnBySongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA47A592058BA6400D1E949 /* Debug */,
+				FDA47A5A2058BA6400D1E949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDA47A3E2058BA6400D1E949 /* Project object */;
+}
