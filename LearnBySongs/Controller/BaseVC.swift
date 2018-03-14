@@ -17,7 +17,7 @@ class BaseVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        naviMain.navigationBar.isHidden = true
+        naviMain.navigationBar.isHidden = false
     }
     
 }

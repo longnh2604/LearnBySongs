@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SideMenuVC: UIViewController {
 
     var mainNavi : UINavigationController?
+    var settingNavi : UINavigationController?
+    var settingVC: SettingVC?
     var menuOptions = ["Home", "Setting", "Logout"]
+    var users: Results<UserData>!
     
     @IBOutlet weak var tblSideMenu: UITableView!
     @IBOutlet weak var imvUser: UIImageView!
@@ -21,6 +25,9 @@ class SideMenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let realm = RealmServices.shared.realm
+        users = realm.objects(UserData.self)
+        
         setupUI()
     }
 
@@ -28,21 +35,20 @@ class SideMenuVC: UIViewController {
     /***************************************************************/
     func setupUI() {
         tblSideMenu.tableFooterView = UIView()
+        tblSideMenu.delegate = self
+        tblSideMenu.dataSource = self
         
-        lblUsername.text = ""
-        lblUserType.text = ""
+        lblUsername.text = users[0].userName
         
-//        if let url = URL.init(string: UserDefaults.standard.string(forKey: "imageURL")!) {
-//            imvAccount.downloadedFrom(url: url)
-//            imvAccount.roundImage(with: imvAccount)
-//        }
-//
-//        if let lstSignedin = UserDefaults.standard.string(forKey: "AppClose") {
-//            lblLstLogined.text = "直前のサインイン " + lstSignedin
-//        }
-//
-//        helpNavi = kMain_Storyboard.instantiateViewController(withIdentifier: "HelpNavi") as? UINavigationController
-//        helpVC = kMain_Storyboard.instantiateViewController(withIdentifier: "HelpVC") as? HelpVC
+        lblUserType.text = getUserType(type: users[0].userType)
+        
+        if let url = URL.init(string: users[0].userImage) {
+            imvUser.downloadedFrom(url: url)
+            imvUser.roundImage(with: imvUser)
+        }
+
+        settingNavi = kMain_Storyboard.instantiateViewController(withIdentifier: "settingNavi") as? UINavigationController
+        settingVC = kMain_Storyboard.instantiateViewController(withIdentifier: "SettingVC") as? SettingVC
     }
     
     func changeViewController(_ index : Int) {
@@ -53,13 +59,12 @@ class SideMenuVC: UIViewController {
             }
             break
         case 1:
-//            self.navigationController?.pushViewController(helpVC!, animated: true)
+            self.navigationController?.pushViewController(settingVC!, animated: true)
             break
         case 2:
             UserDefaults.standard.set("logout", forKey: "LoginState")
             UserDefaults.standard.synchronize()
             RealmServices.shared.deleteAll()
-            //            slideMenuVC.dismiss(animated: true, completion: nil)
             let loginPageView =  self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
             self.present(loginPageView, animated: true, completion: nil)
             break

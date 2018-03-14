@@ -402,11 +402,43 @@
                         <outlet property="lblUserType" destination="XXU-IY-joD" id="EZx-la-Egs"/>
                         <outlet property="lblUsername" destination="1Wh-gZ-P42" id="VW3-Rx-HUl"/>
                         <outlet property="tblSideMenu" destination="JC0-t5-DdU" id="T7E-J0-2Nm"/>
+                        <segue destination="c0a-Pb-jS9" kind="show" id="TKp-6Z-s6W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiD-e2-aqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1621.5999999999999" y="-650.82458770614699"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="dUj-SQ-mRE">
+            <objects>
+                <viewController storyboardIdentifier="SettingVC" id="ajj-0W-JdZ" customClass="SettingVC" customModule="LearnBySongs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xLa-FW-Jrh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5b-in-rdC">
+                                <rect key="frame" x="160" y="355" width="55" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BgL-Qr-C6o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N5b-in-rdC" firstAttribute="centerY" secondItem="qTv-cS-Egw" secondAttribute="centerY" id="a24-pE-XEU"/>
+                            <constraint firstItem="N5b-in-rdC" firstAttribute="centerX" secondItem="qTv-cS-Egw" secondAttribute="centerX" id="yLw-XZ-7IK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qTv-cS-Egw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="0A5-sw-Din"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyx-BX-xwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="-652"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yIY-on-2bR">
@@ -425,6 +457,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uc-SQ-3y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622" y="33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t8m-5P-PRu">
+            <objects>
+                <navigationController storyboardIdentifier="settingNavi" automaticallyAdjustsScrollViewInsets="NO" id="c0a-Pb-jS9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dI7-PZ-tYe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ajj-0W-JdZ" kind="relationship" relationship="rootViewController" id="2ky-Ah-W3g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ik7-sE-vis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412.8000000000002" y="-651.2743628185907"/>
         </scene>
     </scenes>
     <resources>

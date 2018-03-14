@@ -18,7 +18,14 @@ class SplashVC: UIViewController {
 
     func checkLoginState() {
         if UserDefaults.standard.string(forKey: "LoginState") == "logined" {
-            goToMainView()
+            userLogin() { success in
+                if (success) {
+                    self.goToMainView()
+                } else {
+                    self.popupAlert(title: nil, message: kLOGIN_FAILED)
+                    return
+                }
+            }
         } else {
             delay(3.00) {
                 self.goToLoginView()

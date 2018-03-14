@@ -26,6 +26,8 @@ class LoginVC: UIViewController {
     @IBAction func onNormalLogin(_ sender: UIButton) {
         userLogin() { success in
             if (success) {
+                UserDefaults.standard.set("logined", forKey: "LoginState")
+                UserDefaults.standard.synchronize()
                 self.goToMainView()
             } else {
                 self.popupAlert(title: nil, message: kLOGIN_FAILED)

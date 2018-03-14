@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RealmServices.shared.deleteAll()
         
         //Set constant option for slidemneu
-        SlideMenuOptions.leftViewWidth = kScreenSize.width * 0.5
+        SlideMenuOptions.leftViewWidth = kScreenSize.width * 0.8
         SlideMenuOptions.contentViewScale = 1.0
         SlideMenuOptions.contentViewDrag = true
         kLeftMenuVC?.mainNavi = naviMain

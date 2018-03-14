@@ -97,3 +97,15 @@ func findUser(completion:@escaping (Bool) -> ()) {
         print("Failed to get snapshot", error.localizedDescription)
     }
 }
+
+func getUserType(type:Int)->String {
+    var userType = ""
+    if (type == 1) {
+        userType = "Normal Account"
+    } else if (type == 2) {
+        userType = "Premium Account"
+    } else {
+        userType = "Unknown Account"
+    }
+    return userType
+}
