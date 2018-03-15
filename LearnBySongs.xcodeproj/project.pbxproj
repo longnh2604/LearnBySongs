@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		520CBB049B01FE9B41EAF001 /* Pods_LearnBySongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */; };
+		FD5F22332059FDFF00623437 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F22322059FDFF00623437 /* SettingVC.swift */; };
+		FD5F2236205A13B800623437 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2235205A13B800623437 /* MainCell.swift */; };
 		FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A492058BA6400D1E949 /* AppDelegate.swift */; };
 		FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A4B2058BA6400D1E949 /* ViewController.swift */; };
 		FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A4D2058BA6400D1E949 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		2D3107B44C5C06A2758E4443 /* Pods-LearnBySongs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnBySongs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs.debug.xcconfig"; sourceTree = "<group>"; };
 		324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnBySongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07E91C25C2CC252FD7B39A2 /* Pods-LearnBySongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnBySongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs.release.xcconfig"; sourceTree = "<group>"; };
+		FD5F22322059FDFF00623437 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		FD5F2235205A13B800623437 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		FDA47A462058BA6400D1E949 /* LearnBySongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnBySongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA47A492058BA6400D1E949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA47A4B2058BA6400D1E949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,14 @@
 				324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD5F22342059FEFA00623437 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A922059189800D1E949 /* BaseVC.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		FDA47A3D2058BA6400D1E949 = {
@@ -182,11 +194,13 @@
 		FDA47A652058BCA000D1E949 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FD5F22342059FEFA00623437 /* Base */,
 				FDA47A8720590B9600D1E949 /* SideMenu */,
 				FDA47A672058BCF300D1E949 /* SplashVC.swift */,
 				FDA47A692058BD0700D1E949 /* LoginVC.swift */,
 				FDA47A712058BE5600D1E949 /* MainVC.swift */,
-				FDA47A922059189800D1E949 /* BaseVC.swift */,
+				FD5F2235205A13B800623437 /* MainCell.swift */,
+				FD5F22322059FDFF00623437 /* SettingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,8 +391,10 @@
 				FDA47A722058BE5600D1E949 /* MainVC.swift in Sources */,
 				FDA47A762058C3A800D1E949 /* RoundButtonCorner.swift in Sources */,
 				FDA47A7A2058D46100D1E949 /* UserManagement.swift in Sources */,
+				FD5F2236205A13B800623437 /* MainCell.swift in Sources */,
 				FDA47A842058FD9100D1E949 /* VideoData.swift in Sources */,
 				FDA47A8F20590EDF00D1E949 /* UIViewController.swift in Sources */,
+				FD5F22332059FDFF00623437 /* SettingVC.swift in Sources */,
 				FDA47A6E2058BD4A00D1E949 /* Utils.swift in Sources */,
 				FDA47A5C2058BAA500D1E949 /* SubtitlesHandler.swift in Sources */,
 				FDA47A8620590B9000D1E949 /* SideMenuVC.swift in Sources */,

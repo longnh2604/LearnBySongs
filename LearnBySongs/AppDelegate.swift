@@ -43,19 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Now that we've told Realm how to handle the schema change, opening the file
         // will automatically perform the migration
         RealmServices.shared.deleteAll()
-        
-        //Set constant option for slidemneu
-        SlideMenuOptions.leftViewWidth = kScreenSize.width * 0.8
-        SlideMenuOptions.contentViewScale = 1.0
-        SlideMenuOptions.contentViewDrag = true
-        kLeftMenuVC?.mainNavi = naviMain
-        naviMain.navigationBar.isHidden = true
-        
-        //setup Navigation bar
+    
+        //Setup Navigation bar
         UINavigationBar.appearance().barTintColor = UIColor(red: 26/255, green: 188/255, blue: 156/255, alpha: 1)
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Arial", size: 20)!]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        
+        //Setup SlideMenu
+        SlideMenuOptions.leftViewWidth = kScreenSize.width * 0.8
         
         return true
     }

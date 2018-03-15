@@ -10,6 +10,9 @@ import Foundation
 import Firebase
 import RealmSwift
 
+//MARK: - Get Videos
+/***************************************************************/
+
 func getVideosFromDB(completionHandler:@escaping (Bool) -> ()) {
     queryRef.child("videos").observeSingleEvent(of: .value, with: { (snapshot) in
         for snap in snapshot.children.allObjects as! [DataSnapshot] {

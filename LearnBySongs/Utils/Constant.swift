@@ -20,14 +20,8 @@ let queryRef = Database.database().reference()
 //UserDefaults
 let userDefaults = UserDefaults.standard
 
+//ScreenSize Bound
 let kScreenSize: CGSize = UIScreen.main.bounds.size
 
-//Main storyboard
-let kMain_Storyboard = UIStoryboard(name: "Main", bundle: nil)
-//Init SlideMenuVC
-let mainVC = kMain_Storyboard.instantiateViewController(withIdentifier: "MainVC") as? MainVC
-let naviMain = UINavigationController(rootViewController: mainVC!)
+//let slideMenuVC = ExSlideMenuController(mainViewController:naviMain, leftMenuViewController: kLeftMenuVC!)
 
-let slideMenuVC = ExSlideMenuController(mainViewController:naviMain, leftMenuViewController: kLeftMenuVC!)
-//Init LeftMenuVC
-let kLeftMenuVC = kMain_Storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as? SideMenuVC

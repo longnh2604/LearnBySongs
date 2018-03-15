@@ -17,8 +17,4 @@ class GlobalVariables {
         }
         return Static.instance
     }
-    
-    func clearData() {
-        
-    }
 }

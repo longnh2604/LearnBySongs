@@ -9,12 +9,22 @@
 import UIKit
 import RealmSwift
 
-class SideMenuVC: UIViewController {
+enum LeftMenu: Int {
+    case main = 0
+    case setting
+    case login
+}
 
-    var mainNavi : UINavigationController?
-    var settingNavi : UINavigationController?
-    var settingVC: SettingVC?
-    var menuOptions = ["Home", "Setting", "Logout"]
+protocol LeftMenuProtocol : class {
+    func changeViewController(_ menu: LeftMenu)
+}
+
+class SideMenuVC: UIViewController, LeftMenuProtocol {
+    
+    var menus = ["Home", "Setting", "Logout"]
+    var mainViewController: UIViewController!
+    var settingViewController: UIViewController!
+    var loginViewController: UIViewController!
     var users: Results<UserData>!
     
     @IBOutlet weak var tblSideMenu: UITableView!
@@ -22,11 +32,25 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var lblUserType: UILabel!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let realm = RealmServices.shared.realm
         users = realm.objects(UserData.self)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+        self.mainViewController = UINavigationController(rootViewController: mainVC)
+        
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "SettingVC") as! SettingVC
+        self.settingViewController = UINavigationController(rootViewController: settingVC)
+        
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        self.loginViewController = UINavigationController(rootViewController: loginVC)
         
         setupUI()
     }
@@ -46,33 +70,22 @@ class SideMenuVC: UIViewController {
             imvUser.downloadedFrom(url: url)
             imvUser.roundImage(with: imvUser)
         }
-
-        settingNavi = kMain_Storyboard.instantiateViewController(withIdentifier: "settingNavi") as? UINavigationController
-        settingVC = kMain_Storyboard.instantiateViewController(withIdentifier: "SettingVC") as? SettingVC
     }
     
-    func changeViewController(_ index : Int) {
-        switch index {
-        case 0:
-            DispatchQueue.main.async {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-            break
-        case 1:
-            self.navigationController?.pushViewController(settingVC!, animated: true)
-            break
-        case 2:
+    func changeViewController(_ menu: LeftMenu) {
+        switch menu {
+        case .main:
+            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+        case .setting:
+            self.slideMenuController()?.changeMainViewController(self.settingViewController, close: true)
+        case .login:
             UserDefaults.standard.set("logout", forKey: "LoginState")
             UserDefaults.standard.synchronize()
             RealmServices.shared.deleteAll()
-            let loginPageView =  self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-            self.present(loginPageView, animated: true, completion: nil)
-            break
-        default:
-            
-            break
+
+            let loginView =  self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            self.present(loginView, animated: true, completion: nil)
         }
-        toggleLeft()
     }
 }
 
@@ -84,16 +97,22 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuOptions.count
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : SideMenuCell = tableView.dequeueReusableCell(withIdentifier: "sideMenuCell") as! SideMenuCell
-        cell.lblTitle.text = menuOptions[indexPath.row]
+        cell.lblTitle.text = menus[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        changeViewController(indexPath.row)
+        if let menu = LeftMenu(rawValue: indexPath.row) {
+            self.changeViewController(menu)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }

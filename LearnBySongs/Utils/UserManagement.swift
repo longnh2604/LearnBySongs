@@ -10,10 +10,9 @@ import Foundation
 import Firebase
 import RealmSwift
 
-//MARK: - Load Data
+//MARK: - Firebase Authentication
 /***************************************************************/
 
-//Firebase Account Authentication
 func userLogin(completion: @escaping (Bool) -> ()) {
     let cusEmail = "longnh264@gmail.com"
     let cusPassword = "123456"
@@ -61,6 +60,9 @@ func getAppNotify() {
 //    })
 }
 
+//MARK: - Get User Info
+/***************************************************************/
+
 func findUser(completion:@escaping (Bool) -> ()) {
     let userEmail = userDefaults.string(forKey: "email")
     
@@ -97,6 +99,9 @@ func findUser(completion:@escaping (Bool) -> ()) {
         print("Failed to get snapshot", error.localizedDescription)
     }
 }
+
+//MARK: - Get Account Type
+/***************************************************************/
 
 func getUserType(type:Int)->String {
     var userType = ""

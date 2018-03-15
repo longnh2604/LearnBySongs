@@ -8,6 +8,7 @@
 
 import UIKit
 import SlideMenuControllerSwift
+
 extension UIApplication {
     
     class func topViewController(_ viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {

@@ -34,7 +34,17 @@ class SplashVC: UIViewController {
     }
     
     func goToMainView() {
-        self.present(slideMenuVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        leftViewController.mainViewController = nvc
+        
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.delegate = mainViewController
+        self.present(slideMenuController, animated: true, completion: nil)
     }
     
     func goToLoginView() {

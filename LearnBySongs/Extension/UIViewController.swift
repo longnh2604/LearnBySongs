@@ -8,6 +8,7 @@
 
 import UIKit
 import SlideMenuControllerSwift
+
 extension UIViewController {
     
     func addMenuBarButton() {
@@ -17,8 +18,7 @@ extension UIViewController {
     }
     
     func addRightBarButton() {
-        self.addRigtBarButtonWithImage(UIImage(named: "addImageIcon")!, action: #selector(openPhotoVC))
-//        self.addRightBarButtonWithImage(UIImage(named: "addImageIcon")!)
+        self.addRigtBarButtonWithImage(UIImage(named: "sideMenuIcon")!, action: #selector(openPhotoVC))
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addRightGestures()
     }
