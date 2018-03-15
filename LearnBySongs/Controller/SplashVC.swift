@@ -23,7 +23,6 @@ class SplashVC: UIViewController {
                     self.goToMainView()
                 } else {
                     self.popupAlert(title: nil, message: kLOGIN_FAILED)
-                    return
                 }
             }
         } else {
@@ -34,17 +33,23 @@ class SplashVC: UIViewController {
     }
     
     func goToMainView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-        let leftViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
-        
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        leftViewController.mainViewController = nvc
-        
-        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
-        slideMenuController.delegate = mainViewController
-        self.present(slideMenuController, animated: true, completion: nil)
+        getVideosFromDB() { success in
+            if (success) {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+                let leftViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
+                
+                let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+                leftViewController.mainViewController = nvc
+                
+                let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+                slideMenuController.delegate = mainViewController
+                self.present(slideMenuController, animated: true, completion: nil)
+            } else {
+                self.popupAlert(title: nil, message: kGET_VIDEO_FAILED)
+            }
+        }
     }
     
     func goToLoginView() {

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Video DetailVC-->
+        <scene sceneID="lBB-ND-c6w">
+            <objects>
+                <viewController storyboardIdentifier="VideoDetailVC" id="lsu-RP-Abo" customClass="VideoDetailVC" customModule="LearnBySongs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKu-Sn-pFN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek8-MN-bTW">
+                                <rect key="frame" x="20" y="40" width="335" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sna-FI-dLZ">
+                                <rect key="frame" x="37" y="84" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1YC-Ib-p5T"/>
+                                    <constraint firstAttribute="width" constant="300" id="yei-Sn-7S3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98W-aw-37D">
+                                <rect key="frame" x="172" y="414" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="onPlay:" destination="lsu-RP-Abo" eventType="touchUpInside" id="VHV-KS-kYf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ek8-MN-bTW" firstAttribute="leading" secondItem="K8e-WT-idF" secondAttribute="leading" constant="20" id="1ns-uv-X0Y"/>
+                            <constraint firstItem="98W-aw-37D" firstAttribute="top" secondItem="sna-FI-dLZ" secondAttribute="bottom" constant="30" id="ED1-qm-609"/>
+                            <constraint firstItem="K8e-WT-idF" firstAttribute="trailing" secondItem="ek8-MN-bTW" secondAttribute="trailing" constant="20" id="EaI-hM-byq"/>
+                            <constraint firstItem="sna-FI-dLZ" firstAttribute="top" secondItem="ek8-MN-bTW" secondAttribute="bottom" constant="20" id="IdV-LD-Scq"/>
+                            <constraint firstItem="sna-FI-dLZ" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="KFl-wj-xSE"/>
+                            <constraint firstItem="ek8-MN-bTW" firstAttribute="top" secondItem="K8e-WT-idF" secondAttribute="top" constant="20" id="cn2-ZA-Zfn"/>
+                            <constraint firstItem="ek8-MN-bTW" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="enZ-hZ-yln"/>
+                            <constraint firstItem="98W-aw-37D" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="us6-EO-SqR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K8e-WT-idF"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="ek8-MN-bTW" id="RfL-hA-OYQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2d-1t-V8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="-215.44227886056973"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,6 +10,8 @@
 		520CBB049B01FE9B41EAF001 /* Pods_LearnBySongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */; };
 		FD5F22332059FDFF00623437 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F22322059FDFF00623437 /* SettingVC.swift */; };
 		FD5F2236205A13B800623437 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2235205A13B800623437 /* MainCell.swift */; };
+		FD5F2238205A45EE00623437 /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5F2237205A45EE00623437 /* Sub.storyboard */; };
+		FD5F223A205A465200623437 /* VideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2239205A465200623437 /* VideoDetailVC.swift */; };
 		FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A492058BA6400D1E949 /* AppDelegate.swift */; };
 		FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A4B2058BA6400D1E949 /* ViewController.swift */; };
 		FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A4D2058BA6400D1E949 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		B07E91C25C2CC252FD7B39A2 /* Pods-LearnBySongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnBySongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs.release.xcconfig"; sourceTree = "<group>"; };
 		FD5F22322059FDFF00623437 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		FD5F2235205A13B800623437 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		FD5F2237205A45EE00623437 /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
+		FD5F2239205A465200623437 /* VideoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailVC.swift; sourceTree = "<group>"; };
 		FDA47A462058BA6400D1E949 /* LearnBySongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnBySongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA47A492058BA6400D1E949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA47A4B2058BA6400D1E949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		FD5F223B205A48E000623437 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A712058BE5600D1E949 /* MainVC.swift */,
+				FD5F2235205A13B800623437 /* MainCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FDA47A3D2058BA6400D1E949 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 		FDA47A632058BC9600D1E949 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD5F2237205A45EE00623437 /* Sub.storyboard */,
 				FDA47A4D2058BA6400D1E949 /* Main.storyboard */,
 				FDA47A522058BA6400D1E949 /* LaunchScreen.storyboard */,
 			);
@@ -194,13 +208,13 @@
 		FDA47A652058BCA000D1E949 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FD5F22342059FEFA00623437 /* Base */,
-				FDA47A8720590B9600D1E949 /* SideMenu */,
 				FDA47A672058BCF300D1E949 /* SplashVC.swift */,
 				FDA47A692058BD0700D1E949 /* LoginVC.swift */,
-				FDA47A712058BE5600D1E949 /* MainVC.swift */,
-				FD5F2235205A13B800623437 /* MainCell.swift */,
+				FD5F22342059FEFA00623437 /* Base */,
+				FDA47A8720590B9600D1E949 /* SideMenu */,
+				FD5F223B205A48E000623437 /* Main */,
 				FD5F22322059FDFF00623437 /* SettingVC.swift */,
+				FD5F2239205A465200623437 /* VideoDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +308,7 @@
 				FDA47A612058BB4B00D1E949 /* trailer_720p.srt in Resources */,
 				FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */,
 				FDA47A622058BB4B00D1E949 /* trailer_720p.mov in Resources */,
+				FD5F2238205A45EE00623437 /* Sub.storyboard in Resources */,
 				FDA47A782058CFC500D1E949 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +406,7 @@
 				FDA47A722058BE5600D1E949 /* MainVC.swift in Sources */,
 				FDA47A762058C3A800D1E949 /* RoundButtonCorner.swift in Sources */,
 				FDA47A7A2058D46100D1E949 /* UserManagement.swift in Sources */,
+				FD5F223A205A465200623437 /* VideoDetailVC.swift in Sources */,
 				FD5F2236205A13B800623437 /* MainCell.swift in Sources */,
 				FDA47A842058FD9100D1E949 /* VideoData.swift in Sources */,
 				FDA47A8F20590EDF00D1E949 /* UIViewController.swift in Sources */,

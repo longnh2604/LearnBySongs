@@ -8,10 +8,12 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import RealmSwift
 
 class MainVC: BaseVC {
 
     @IBOutlet weak var tblMain: UITableView!
+    var videos: Results<VideoData>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,9 @@ class MainVC: BaseVC {
         tblMain.tableFooterView = UIView()
         tblMain.delegate = self
         tblMain.dataSource = self
+        
+        let realm = RealmServices.shared.realm
+        videos = realm.objects(VideoData.self)
     }
 
 }
@@ -31,16 +36,28 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return videos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : MainCell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as! MainCell
+        cell.lblTitle.text = videos[indexPath.row].videoTitle
+        cell.lblAuthor.text = videos[indexPath.row].videoAuthor
+        cell.lblDuration.text = "Duration 3:00"
+        
+        if let url = URL.init(string: videos[0].videoThumb) {
+            cell.imvVideo.downloadedFrom(url: url)
+            cell.imvVideo.roundImage(with: cell.imvVideo)
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let storyboard = UIStoryboard(name: "Sub", bundle: nil)
+        let videoDetailVC = storyboard.instantiateViewController(withIdentifier: "VideoDetailVC") as! VideoDetailVC
+        videoDetailVC.cellIndex = indexPath.row
+        self.navigationController?.pushViewController(videoDetailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
