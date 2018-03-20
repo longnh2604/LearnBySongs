@@ -45,7 +45,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         cell.lblAuthor.text = videos[indexPath.row].videoAuthor
         cell.lblDuration.text = "Duration 3:00"
         
-        if let url = URL.init(string: videos[0].videoThumb) {
+        if let url = URL.init(string: videos[indexPath.row].videoThumb) {
             cell.imvVideo.downloadedFrom(url: url)
             cell.imvVideo.roundImage(with: cell.imvVideo)
         }
