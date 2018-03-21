@@ -9,61 +9,84 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueExtras.ttc">
-            <string>HelveticaNeue-CondensedBold</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Video DetailVC-->
+        <!--Paging MenuVC-->
+        <scene sceneID="mK4-Ta-dI0">
+            <objects>
+                <viewController storyboardIdentifier="PagingMenuVC" id="hTp-S0-QbU" customClass="PagingMenuVC" customModule="LearnBySongs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gU3-sq-qLS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XXN-9k-0nq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XWT-Oj-10i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfi-XA-boB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327.19999999999999" y="-215.44227886056973"/>
+        </scene>
+        <!--vai ca-->
         <scene sceneID="lBB-ND-c6w">
             <objects>
-                <viewController storyboardIdentifier="VideoDetailVC" id="lsu-RP-Abo" customClass="VideoDetailVC" customModule="LearnBySongs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoDetailVC" title="vai ca" id="lsu-RP-Abo" customClass="VideoDetailVC" customModule="LearnBySongs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UKu-Sn-pFN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek8-MN-bTW">
-                                <rect key="frame" x="20" y="40" width="335" height="24"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQR-Ou-AR4">
+                                <rect key="frame" x="166" y="333" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JvH-lX-Lco"/>
+                                    <constraint firstAttribute="width" constant="42" id="nwd-Qe-zp4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sna-FI-dLZ">
-                                <rect key="frame" x="37" y="84" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="1YC-Ib-p5T"/>
-                                    <constraint firstAttribute="width" constant="300" id="yei-Sn-7S3"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98W-aw-37D">
-                                <rect key="frame" x="172" y="414" width="30" height="30"/>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="onPlay:" destination="lsu-RP-Abo" eventType="touchUpInside" id="VHV-KS-kYf"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ek8-MN-bTW" firstAttribute="leading" secondItem="K8e-WT-idF" secondAttribute="leading" constant="20" id="1ns-uv-X0Y"/>
-                            <constraint firstItem="98W-aw-37D" firstAttribute="top" secondItem="sna-FI-dLZ" secondAttribute="bottom" constant="30" id="ED1-qm-609"/>
-                            <constraint firstItem="K8e-WT-idF" firstAttribute="trailing" secondItem="ek8-MN-bTW" secondAttribute="trailing" constant="20" id="EaI-hM-byq"/>
-                            <constraint firstItem="sna-FI-dLZ" firstAttribute="top" secondItem="ek8-MN-bTW" secondAttribute="bottom" constant="20" id="IdV-LD-Scq"/>
-                            <constraint firstItem="sna-FI-dLZ" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="KFl-wj-xSE"/>
-                            <constraint firstItem="ek8-MN-bTW" firstAttribute="top" secondItem="K8e-WT-idF" secondAttribute="top" constant="20" id="cn2-ZA-Zfn"/>
-                            <constraint firstItem="ek8-MN-bTW" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="enZ-hZ-yln"/>
-                            <constraint firstItem="98W-aw-37D" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="us6-EO-SqR"/>
+                            <constraint firstItem="iQR-Ou-AR4" firstAttribute="centerY" secondItem="K8e-WT-idF" secondAttribute="centerY" id="NLa-Li-Rjf"/>
+                            <constraint firstItem="iQR-Ou-AR4" firstAttribute="centerX" secondItem="K8e-WT-idF" secondAttribute="centerX" id="VWT-uC-Met"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K8e-WT-idF"/>
                     </view>
-                    <connections>
-                        <outlet property="lblTitle" destination="ek8-MN-bTW" id="RfL-hA-OYQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2d-1t-V8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="-215.44227886056973"/>
+            <point key="canvasLocation" x="368.80000000000001" y="-215.44227886056973"/>
+        </scene>
+        <!--dai lun-->
+        <scene sceneID="PdT-yc-tP6">
+            <objects>
+                <viewController storyboardIdentifier="NewWordsVC" title="dai lun" id="MDb-Ti-OEp" customClass="NewWordsVC" customModule="LearnBySongs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pch-CI-cIp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nw-57-F1B">
+                                <rect key="frame" x="166.5" y="333" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2LQ-u9-1fA"/>
+                                    <constraint firstAttribute="width" constant="42" id="DTu-Ab-W4y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.89411764709999997" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1nw-57-F1B" firstAttribute="centerX" secondItem="1y6-bj-GP2" secondAttribute="centerX" id="5wT-LT-Uhp"/>
+                            <constraint firstItem="1nw-57-F1B" firstAttribute="centerY" secondItem="1y6-bj-GP2" secondAttribute="centerY" id="a1c-UZ-t2J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1y6-bj-GP2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pks-12-U73" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="-215.44227886056973"/>
         </scene>
     </scenes>
 </document>

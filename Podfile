@@ -12,4 +12,6 @@ pod 'Firebase/Database'
 pod 'FBSDKLoginKit'
 pod 'RealmSwift'
 pod 'SlideMenuControllerSwift'
+pod 'Parchment'
+
 end

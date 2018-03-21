@@ -55,9 +55,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Sub", bundle: nil)
-        let videoDetailVC = storyboard.instantiateViewController(withIdentifier: "VideoDetailVC") as! VideoDetailVC
-        videoDetailVC.cellIndex = indexPath.row
-        self.navigationController?.pushViewController(videoDetailVC, animated: true)
+        let pagingMenuVC = storyboard.instantiateViewController(withIdentifier: "PagingMenuVC") as! PagingMenuVC
+        self.navigationController?.pushViewController(pagingMenuVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -21,10 +21,12 @@ class VideoDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let realm = RealmServices.shared.realm
-        videos = realm.objects(VideoData.self)
-        
-        lblTitle.text = videos[cellIndex!].videoTitle
+//        cellIndex = 1
+//        
+//        let realm = RealmServices.shared.realm
+//        videos = realm.objects(VideoData.self)
+//        
+//        lblTitle.text = videos[cellIndex!].videoTitle
     }
 
     @IBAction func onPlay(_ sender: UIButton) {
