@@ -33,6 +33,5 @@ class PagingMenuVC: UIViewController {
         view.addSubview(pagingViewController.view)
         view.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParentViewController: self)
-        
     }
 }

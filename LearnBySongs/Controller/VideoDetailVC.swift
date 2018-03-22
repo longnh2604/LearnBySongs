@@ -13,20 +13,31 @@ import RealmSwift
 
 class VideoDetailVC: UIViewController {
 
-    var cellIndex : Int?
+    var cellIndex: Int?
+    
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var imvVideoThumb: UIImageView!
+    @IBOutlet weak var lblAuthor: UILabel!
+    @IBOutlet weak var lblDuration: UILabel!
+    
     var videos: Results<VideoData>!
     var videoPlayer:AVPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let realm = RealmServices.shared.realm
+        videos = realm.objects(VideoData.self)
         
-//        cellIndex = 1
-//        
-//        let realm = RealmServices.shared.realm
-//        videos = realm.objects(VideoData.self)
-//        
-//        lblTitle.text = videos[cellIndex!].videoTitle
+        cellIndex = GlobalVariables.sharedManager.cellIndex
+        
+        lblTitle.text = videos[cellIndex!].videoTitle
+        lblAuthor.text = videos[cellIndex!].videoAuthor
+        lblDuration.text = "3 : 00"
+        
+        if let url = URL.init(string: videos[cellIndex!].videoThumb) {
+            imvVideoThumb.downloadedFrom(url: url)
+        }
     }
 
     @IBAction func onPlay(_ sender: UIButton) {

@@ -14,6 +14,7 @@
 		FD5F2236205A13B800623437 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2235205A13B800623437 /* MainCell.swift */; };
 		FD5F2238205A45EE00623437 /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5F2237205A45EE00623437 /* Sub.storyboard */; };
 		FD5F223A205A465200623437 /* VideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2239205A465200623437 /* VideoDetailVC.swift */; };
+		FD5F78192063B00900334EA4 /* NewWordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F78182063B00900334EA4 /* NewWordsCell.swift */; };
 		FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A492058BA6400D1E949 /* AppDelegate.swift */; };
 		FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A4B2058BA6400D1E949 /* ViewController.swift */; };
 		FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A4D2058BA6400D1E949 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		FD5F2235205A13B800623437 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		FD5F2237205A45EE00623437 /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
 		FD5F2239205A465200623437 /* VideoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailVC.swift; sourceTree = "<group>"; };
+		FD5F78182063B00900334EA4 /* NewWordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordsCell.swift; sourceTree = "<group>"; };
 		FDA47A462058BA6400D1E949 /* LearnBySongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnBySongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA47A492058BA6400D1E949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA47A4B2058BA6400D1E949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				41939B4720629DC700D76088 /* PagingMenuVC.swift */,
 				FD5F2239205A465200623437 /* VideoDetailVC.swift */,
 				41939B45206291CD00D76088 /* NewWordsVC.swift */,
+				FD5F78182063B00900334EA4 /* NewWordsCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				41939B46206291CD00D76088 /* NewWordsVC.swift in Sources */,
 				FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */,
 				FDA47A722058BE5600D1E949 /* MainVC.swift in Sources */,
+				FD5F78192063B00900334EA4 /* NewWordsCell.swift in Sources */,
 				FDA47A762058C3A800D1E949 /* RoundButtonCorner.swift in Sources */,
 				FDA47A7A2058D46100D1E949 /* UserManagement.swift in Sources */,
 				FD5F223A205A465200623437 /* VideoDetailVC.swift in Sources */,

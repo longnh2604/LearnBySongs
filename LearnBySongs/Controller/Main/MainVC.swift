@@ -56,6 +56,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Sub", bundle: nil)
         let pagingMenuVC = storyboard.instantiateViewController(withIdentifier: "PagingMenuVC") as! PagingMenuVC
+        GlobalVariables.sharedManager.cellIndex = indexPath.row
         self.navigationController?.pushViewController(pagingMenuVC, animated: true)
     }
     
