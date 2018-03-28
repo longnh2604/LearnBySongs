@@ -35,14 +35,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdS-LM-PTM">
-                                <rect key="frame" x="17" y="120" width="340" height="220"/>
+                                <rect key="frame" x="17.5" y="120" width="340" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="240-Xw-TYE"/>
                                     <constraint firstAttribute="width" constant="340" id="D2q-U1-qAe"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-4c-cSF">
-                                <rect key="frame" x="17" y="360" width="80" height="21"/>
+                                <rect key="frame" x="17.5" y="360" width="80" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="uUU-WY-5CL"/>
                                 </constraints>
@@ -51,19 +51,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU6-lw-r7L">
-                                <rect key="frame" x="17" y="401" width="80" height="21"/>
+                                <rect key="frame" x="17.5" y="401" width="80" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aX-vw-Bgn">
-                                <rect key="frame" x="107" y="401" width="248" height="21"/>
+                                <rect key="frame" x="107.5" y="401" width="247.5" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.26767555394586295" blue="0.4085078308054606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4r-Kq-QCA">
-                                <rect key="frame" x="107" y="360" width="248" height="21"/>
+                                <rect key="frame" x="107.5" y="360" width="247.5" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.26767555394586295" blue="0.4085078308054606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -110,9 +110,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4J-Dy-rY6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4J-Dy-rY6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newWordsCell" rowHeight="160" id="7Fe-Lr-IM4" customClass="NewWordsCell" customModule="LearnBySongs" customModuleProvider="target">
@@ -159,9 +158,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblEnglish" destination="SIg-Gj-TU9" id="dAk-za-sBA"/>
-                                            <outlet property="lblJapanese" destination="cpN-bN-IJ5" id="xud-1a-XfK"/>
-                                            <outlet property="lblVietnamese" destination="ieA-gL-XbJ" id="dy2-sW-29W"/>
+                                            <outlet property="lblHiragana" destination="ieA-gL-XbJ" id="Nzs-RF-clg"/>
+                                            <outlet property="lblKanji" destination="cpN-bN-IJ5" id="qoL-XF-bTh"/>
+                                            <outlet property="lblTranslate" destination="SIg-Gj-TU9" id="t2i-Wm-4Uv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -172,6 +171,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k4J-Dy-rY6" firstAttribute="bottom" secondItem="1y6-bj-GP2" secondAttribute="bottom" id="8OC-5P-GOZ"/>
+                            <constraint firstItem="k4J-Dy-rY6" firstAttribute="leading" secondItem="1y6-bj-GP2" secondAttribute="leading" id="SnT-uD-OZH"/>
+                            <constraint firstItem="k4J-Dy-rY6" firstAttribute="trailing" secondItem="1y6-bj-GP2" secondAttribute="trailing" id="TdD-nM-lfc"/>
+                            <constraint firstItem="k4J-Dy-rY6" firstAttribute="top" secondItem="Pch-CI-cIp" secondAttribute="top" id="vZN-AJ-jzf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1y6-bj-GP2"/>
                     </view>
                     <connections>

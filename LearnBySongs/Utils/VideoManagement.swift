@@ -27,14 +27,23 @@ func getVideosFromDB(completionHandler:@escaping (Bool) -> ()) {
             let lyric = dictionary["lyric"] as? String
             let thumb = dictionary["thumb"] as? String
             let author = dictionary["author"] as? String
-
+            let words = dictionary["words"] as? String
             let newVideo = VideoData()
+            
+//            if dictionary["words"] != nil {
+//                if let words = dictionary["words"] as? [String]{
+//                    for word in words {
+//                        newVideo.videoWords.append(word)
+//                    }
+//                }
+//            }
             newVideo.videoID = videoID!
             newVideo.videoTitle = title!
             newVideo.videoURL = url!
             newVideo.videoLyric = lyric!
             newVideo.videoThumb = thumb!
             newVideo.videoAuthor = author!
+            newVideo.videoWords = words!
 
             RealmServices.shared.create(newVideo)
             completionHandler(true)

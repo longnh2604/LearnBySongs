@@ -10,9 +10,9 @@ import UIKit
 
 class NewWordsCell: UITableViewCell {
 
-    @IBOutlet weak var lblJapanese: UILabel!
-    @IBOutlet weak var lblVietnamese: UILabel!
-    @IBOutlet weak var lblEnglish: UILabel!
+    @IBOutlet weak var lblKanji: UILabel!
+    @IBOutlet weak var lblHiragana: UILabel!
+    @IBOutlet weak var lblTranslate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

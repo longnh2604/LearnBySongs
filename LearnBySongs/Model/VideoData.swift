@@ -16,4 +16,6 @@ class VideoData: Object {
     @objc dynamic var videoURL: String = ""
     @objc dynamic var videoLyric : String = ""
     @objc dynamic var videoThumb : String = ""
+    @objc dynamic var videoWords : String = ""
+//    var videoWords = List<String>()
 }
