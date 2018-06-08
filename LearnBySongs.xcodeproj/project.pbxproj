@@ -15,6 +15,10 @@
 		FD5F2238205A45EE00623437 /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5F2237205A45EE00623437 /* Sub.storyboard */; };
 		FD5F223A205A465200623437 /* VideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2239205A465200623437 /* VideoDetailVC.swift */; };
 		FD5F78192063B00900334EA4 /* NewWordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F78182063B00900334EA4 /* NewWordsCell.swift */; };
+		FD7B9E1920CA841400934BE1 /* KaraokeLyricLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B9E1820CA841400934BE1 /* KaraokeLyricLabel.swift */; };
+		FD7B9E1B20CA842400934BE1 /* KaraokeLyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B9E1A20CA842400934BE1 /* KaraokeLyric.swift */; };
+		FD7B9E1D20CA843500934BE1 /* KaraokeLyricParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B9E1C20CA843500934BE1 /* KaraokeLyricParser.swift */; };
+		FD7B9E1F20CA844200934BE1 /* KaraokeLyricPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7B9E1E20CA844200934BE1 /* KaraokeLyricPlayerView.swift */; };
 		FDA47A4A2058BA6400D1E949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A492058BA6400D1E949 /* AppDelegate.swift */; };
 		FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA47A4B2058BA6400D1E949 /* ViewController.swift */; };
 		FDA47A4F2058BA6400D1E949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA47A4D2058BA6400D1E949 /* Main.storyboard */; };
@@ -56,6 +60,10 @@
 		FD5F2237205A45EE00623437 /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
 		FD5F2239205A465200623437 /* VideoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailVC.swift; sourceTree = "<group>"; };
 		FD5F78182063B00900334EA4 /* NewWordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordsCell.swift; sourceTree = "<group>"; };
+		FD7B9E1820CA841400934BE1 /* KaraokeLyricLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeLyricLabel.swift; sourceTree = "<group>"; };
+		FD7B9E1A20CA842400934BE1 /* KaraokeLyric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeLyric.swift; sourceTree = "<group>"; };
+		FD7B9E1C20CA843500934BE1 /* KaraokeLyricParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeLyricParser.swift; sourceTree = "<group>"; };
+		FD7B9E1E20CA844200934BE1 /* KaraokeLyricPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraokeLyricPlayerView.swift; sourceTree = "<group>"; };
 		FDA47A462058BA6400D1E949 /* LearnBySongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnBySongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA47A492058BA6400D1E949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA47A4B2058BA6400D1E949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +142,17 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		FD7B9E1720CA836800934BE1 /* Karaoke */ = {
+			isa = PBXGroup;
+			children = (
+				FD7B9E1820CA841400934BE1 /* KaraokeLyricLabel.swift */,
+				FD7B9E1A20CA842400934BE1 /* KaraokeLyric.swift */,
+				FD7B9E1C20CA843500934BE1 /* KaraokeLyricParser.swift */,
+				FD7B9E1E20CA844200934BE1 /* KaraokeLyricPlayerView.swift */,
+			);
+			path = Karaoke;
+			sourceTree = "<group>";
+		};
 		FDA47A3D2058BA6400D1E949 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +174,7 @@
 		FDA47A482058BA6400D1E949 /* LearnBySongs */ = {
 			isa = PBXGroup;
 			children = (
+				FD7B9E1720CA836800934BE1 /* Karaoke */,
 				FDA47A662058BCAD00D1E949 /* Utils */,
 				FDA47A652058BCA000D1E949 /* Controller */,
 				FDA47A642058BC9B00D1E949 /* Model */,
@@ -403,14 +423,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7B9E1F20CA844200934BE1 /* KaraokeLyricPlayerView.swift in Sources */,
 				FDA47A752058C3A800D1E949 /* RoundUIViewCorner.swift in Sources */,
 				FDA47A4C2058BA6400D1E949 /* ViewController.swift in Sources */,
 				FDA47A682058BCF300D1E949 /* SplashVC.swift in Sources */,
 				FDA47A932059189800D1E949 /* BaseVC.swift in Sources */,
 				FDA47A802058EBBB00D1E949 /* UserData.swift in Sources */,
 				41939B4820629DC700D76088 /* PagingMenuVC.swift in Sources */,
+				FD7B9E1B20CA842400934BE1 /* KaraokeLyric.swift in Sources */,
 				FDA47A822058ED6E00D1E949 /* VideoManagement.swift in Sources */,
 				FDA47A8920590BB700D1E949 /* SideMenuCell.swift in Sources */,
+				FD7B9E1920CA841400934BE1 /* KaraokeLyricLabel.swift in Sources */,
 				FDA47A702058BDEF00D1E949 /* GlobalVariables.swift in Sources */,
 				FDA47A7C2058E55200D1E949 /* RealmServices.swift in Sources */,
 				FDA47A8D20590ECF00D1E949 /* UIApplication.swift in Sources */,
@@ -421,6 +444,7 @@
 				FDA47A762058C3A800D1E949 /* RoundButtonCorner.swift in Sources */,
 				FDA47A7A2058D46100D1E949 /* UserManagement.swift in Sources */,
 				FD5F223A205A465200623437 /* VideoDetailVC.swift in Sources */,
+				FD7B9E1D20CA843500934BE1 /* KaraokeLyricParser.swift in Sources */,
 				FD5F2236205A13B800623437 /* MainCell.swift in Sources */,
 				FDA47A842058FD9100D1E949 /* VideoData.swift in Sources */,
 				FDA47A8F20590EDF00D1E949 /* UIViewController.swift in Sources */,
