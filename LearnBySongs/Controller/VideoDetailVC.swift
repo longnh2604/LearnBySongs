@@ -14,11 +14,18 @@ import RealmSwift
 class VideoDetailVC: UIViewController {
 
     var cellIndex: Int?
+    var lyric:KaraokeLyric?
+    private var timingKeys:Array<CGFloat> = [CGFloat]()
     
+    private var audioPlayer:AVAudioPlayer?
+    private var playerTimer:Timer?
+    
+    @IBOutlet weak var sliderSong: UISlider!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imvVideoThumb: UIImageView!
     @IBOutlet weak var lblAuthor: UILabel!
     @IBOutlet weak var lblDuration: UILabel!
+    @IBOutlet weak var lyricView: KaraokeLyricPlayerView!
     
     var videos: Results<VideoData>!
     var videoPlayer:AVPlayer!
@@ -39,40 +46,105 @@ class VideoDetailVC: UIViewController {
             imvVideoThumb.downloadedFrom(url: url)
         }
     }
-
-    @IBAction func onPlay(_ sender: UIButton) {
+    
+    func stopAll() {
+        playerTimer?.invalidate()
+        audioPlayer?.stop()
+        lyricView.stop()
+    }
+    
+    func startTimer() {
+        playerTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerStick(timer:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func timerStick(timer:Timer) {
         
-        // Video Player
-        let videoURL = NSURL(string: videos[cellIndex!].videoURL)
-        let player = AVPlayer(url: videoURL! as URL)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        
-        // Add subtitles
-        let subtitleURL = NSURL(string: videos[cellIndex!].videoLyric)! as URL
-        playerViewController.addSubtitles().open(file: subtitleURL)
-        playerViewController.addSubtitles().open(file: subtitleURL, encoding: .utf8)
-        // Text Properties
-        playerViewController.subtitleLabel?.textColor = UIColor.red
-        
-        // Play
-        self.present(playerViewController, animated: true) {
-            playerViewController.player!.play()
+        if let audioPlayer = self.audioPlayer , audioPlayer.isPlaying {
+            let value = audioPlayer.currentTime / audioPlayer.duration
+            sliderSong.value = Float(value)
         }
+        
+    }
+
+//    @IBAction func onPlay(_ sender: UIButton) {
+//
+//        // Video Player
+//        let videoURL = NSURL(string: videos[cellIndex!].videoURL)
+//        let player = AVPlayer(url: videoURL! as URL)
+//        let playerViewController = AVPlayerViewController()
+//        playerViewController.player = player
+//
+//        // Add subtitles
+//        let subtitleURL = NSURL(string: videos[cellIndex!].videoLyric)! as URL
+//        playerViewController.addSubtitles().open(file: subtitleURL)
+//        playerViewController.addSubtitles().open(file: subtitleURL, encoding: .utf8)
+//        // Text Properties
+//        playerViewController.subtitleLabel?.textColor = UIColor.red
+//
+//        // Play
+//        self.present(playerViewController, animated: true) {
+//            playerViewController.player!.play()
+//        }
+//    }
+//
+//    func subtitleParser() {
+//
+//        // Subtitle file
+//        let subtitleFile = Bundle.main.path(forResource: videos[cellIndex!].videoLyric, ofType: "srt")
+//        let subtitleURL = URL(fileURLWithPath: subtitleFile!)
+//
+//        // Subtitle parser
+//        let parser = Subtitles(file: subtitleURL, encoding: .utf8)
+//
+//        // Do something with result
+//        let subtitles = parser.searchSubtitles(at: 2.0) // Search subtitle at 2.0 seconds
+//        print("in subtitle = %@",subtitles!)
+//    }
+    
+    @IBAction func onPlay(_ sender: UIButton) {
+        audioPlayer?.play()
+        lyricView.start()
+        self.startTimer()
+    }
+}
+
+extension VideoDetailVC: LyricPlayerViewDataSource {
+    
+    func timesForLyricPlayerView(playerView: KaraokeLyricPlayerView) -> Array<CGFloat> {
+        return timingKeys
     }
     
-    func subtitleParser() {
+    func lyricPlayerView(playerView: KaraokeLyricPlayerView, atIndex:NSInteger) -> KaraokeLyricLabel {
         
-        // Subtitle file
-        let subtitleFile = Bundle.main.path(forResource: videos[cellIndex!].videoLyric, ofType: "srt")
-        let subtitleURL = URL(fileURLWithPath: subtitleFile!)
+        let lyricLabel          = playerView.reuseLyricView()
+        lyricLabel.textColor    = UIColor.white
+        lyricLabel.fillTextColor = UIColor.blue
+        lyricLabel.font         = UIFont(name: "HelveticaNeue-Bold", size: 16.0)
         
-        // Subtitle parser
-        let parser = Subtitles(file: subtitleURL, encoding: .utf8)
+        let key = timingKeys[atIndex]
         
-        // Do something with result
-        let subtitles = parser.searchSubtitles(at: 2.0) // Search subtitle at 2.0 seconds
-        print("in subtitle = %@",subtitles!)
+        lyricLabel.text = self.lyric?.content![key]
+        return lyricLabel
     }
     
+    func lyricPlayerView(playerView: KaraokeLyricPlayerView, allowLyricAnimationAtIndex: NSInteger) -> Bool {
+        return true
+    }
+}
+
+extension VideoDetailVC: LyricPlayerViewDelegate {
+    func lyricPlayerViewDidStop(playerView: KaraokeLyricPlayerView) {
+        playerTimer?.invalidate()
+    }
+    
+    func lyricPlayerViewDidStart(playerView: KaraokeLyricPlayerView) {
+//        self.toogleButton.setTitle("Pause", for: .normal)
+//        self.toogleButton.tag = 1
+    }
+}
+
+extension VideoDetailVC: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        self.stopAll()
+    }
 }
