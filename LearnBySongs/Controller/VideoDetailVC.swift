@@ -17,7 +17,7 @@ class VideoDetailVC: UIViewController {
     var lyric:KaraokeLyric?
     private var timingKeys:Array<CGFloat> = [CGFloat]()
     
-    private var audioPlayer:AVAudioPlayer?
+    private var audioPlayer:AVAudioPlayer!
     private var playerTimer:Timer?
     
     @IBOutlet weak var sliderSong: UISlider!
@@ -94,10 +94,9 @@ class VideoDetailVC: UIViewController {
         lyricView.dataSource = self
         lyricView.delegate = self
         
-//        let songURL = URL(fileURLWithPath: videos[cellIndex!].videoURL)
-//        audioPlayer = try! AVAudioPlayer(contentsOf: songURL)
-//        audioPlayer = try! AVAudioPlayer(contentsOf: songURL as URL)
-        audioPlayer?.delegate = self
+        let songURL = NSURL(string: videos[cellIndex!].videoURL)
+        audioPlayer = try! AVAudioPlayer(contentsOf: songURL! as URL)
+        audioPlayer.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
