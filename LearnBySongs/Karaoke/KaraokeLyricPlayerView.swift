@@ -234,7 +234,7 @@ class KaraokeLyricPlayerView: UIView {
         }
         
         if indexTiming == 0 {
-            
+            print(timingForLyric)
             let timing = TimeInterval(timingForLyric[indexTiming])
             self.timer = Timer.scheduledTimer(timeInterval: timing, target: self, selector: #selector(handleAnimationAndShowLabel(timer:)), userInfo: nil, repeats: false)
             isPlaying = true;

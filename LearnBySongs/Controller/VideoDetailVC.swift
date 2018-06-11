@@ -36,6 +36,9 @@ class VideoDetailVC: UIViewController {
         let realm = RealmServices.shared.realm
         videos = realm.objects(VideoData.self)
         
+        let lyricParser = BasicKaraokeLyricParser()
+        lyric   = lyricParser.lyricFromLocalPathFileName(lrcFileName: "tri_ky")
+        
         cellIndex = GlobalVariables.sharedManager.cellIndex
         
         lblTitle.text = videos[cellIndex!].videoTitle
@@ -45,6 +48,25 @@ class VideoDetailVC: UIViewController {
         if let url = URL.init(string: videos[cellIndex!].videoThumb) {
             imvVideoThumb.downloadedFrom(url: url)
         }
+        
+        if let lyric = self.lyric , self.lyric?.content != nil {
+            timingKeys = Array(lyric.content!.keys).sorted()
+        }
+        
+        lyricView.dataSource = self
+        lyricView.delegate = self
+        
+//        let songURL = URL(fileURLWithPath: videos[cellIndex!].videoURL)
+//        audioPlayer = try! AVAudioPlayer(contentsOf: songURL)
+//        audioPlayer = try! AVAudioPlayer(contentsOf: songURL as URL)
+        audioPlayer?.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        audioPlayer?.prepareToPlay()
+        lyricView.prepareToPlay()
+        
+        self.title = self.lyric?.title
     }
     
     func stopAll() {
