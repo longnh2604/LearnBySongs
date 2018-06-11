@@ -46,8 +46,8 @@ func getVideosFromDB(completionHandler:@escaping (Bool) -> ()) {
             newVideo.videoWords = words!
 
             RealmServices.shared.create(newVideo)
-            completionHandler(true)
         }
+        completionHandler(true)
     })
 }
 

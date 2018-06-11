@@ -45,6 +45,10 @@ class SplashVC: UIViewController {
                 
                 let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
                 slideMenuController.delegate = mainViewController
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = slideMenuController
+                
                 self.present(slideMenuController, animated: true, completion: nil)
             } else {
                 self.popupAlert(title: nil, message: kGET_VIDEO_FAILED)
@@ -54,6 +58,8 @@ class SplashVC: UIViewController {
     
     func goToLoginView() {
         let loginView =  self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = loginView
         self.present(loginView, animated: true, completion: nil)
     }
 }

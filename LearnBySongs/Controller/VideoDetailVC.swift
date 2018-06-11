@@ -30,6 +30,44 @@ class VideoDetailVC: UIViewController {
     var videos: Results<VideoData>!
     var videoPlayer:AVPlayer!
     
+    func handleInterruption(notification: NSNotification) {
+        
+        //guard let interruptionType = notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? AVAudioSessionInterruptionType else { print("wrong type"); return }
+        
+        if notification.name != NSNotification.Name.AVAudioSessionInterruption
+            || notification.userInfo == nil{
+            return
+        }
+        
+        var info = notification.userInfo!
+        var intValue: UInt = 0
+        (info[AVAudioSessionInterruptionTypeKey] as! NSValue).getValue(&intValue)
+        if let interruptionType = AVAudioSessionInterruptionType(rawValue: intValue) {
+            
+            switch interruptionType {
+                
+            case .began:
+                print("began")
+                // player is paused and session is inactive. need to update UI)
+                audioPlayer?.pause()
+                print("audio paused")
+                
+            default:
+                print("ended")
+                /** /
+                 if let option = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? AVAudioSessionInterruptionOptions where option == .ShouldResume {
+                 // ok to resume playing, re activate session and resume playing
+                 // need to update UI
+                 player.play()
+                 print("audio resumed")
+                 }
+                 / **/
+                audioPlayer?.play()
+                print("audio resumed")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -87,41 +125,6 @@ class VideoDetailVC: UIViewController {
         }
         
     }
-
-//    @IBAction func onPlay(_ sender: UIButton) {
-//
-//        // Video Player
-//        let videoURL = NSURL(string: videos[cellIndex!].videoURL)
-//        let player = AVPlayer(url: videoURL! as URL)
-//        let playerViewController = AVPlayerViewController()
-//        playerViewController.player = player
-//
-//        // Add subtitles
-//        let subtitleURL = NSURL(string: videos[cellIndex!].videoLyric)! as URL
-//        playerViewController.addSubtitles().open(file: subtitleURL)
-//        playerViewController.addSubtitles().open(file: subtitleURL, encoding: .utf8)
-//        // Text Properties
-//        playerViewController.subtitleLabel?.textColor = UIColor.red
-//
-//        // Play
-//        self.present(playerViewController, animated: true) {
-//            playerViewController.player!.play()
-//        }
-//    }
-//
-//    func subtitleParser() {
-//
-//        // Subtitle file
-//        let subtitleFile = Bundle.main.path(forResource: videos[cellIndex!].videoLyric, ofType: "srt")
-//        let subtitleURL = URL(fileURLWithPath: subtitleFile!)
-//
-//        // Subtitle parser
-//        let parser = Subtitles(file: subtitleURL, encoding: .utf8)
-//
-//        // Do something with result
-//        let subtitles = parser.searchSubtitles(at: 2.0) // Search subtitle at 2.0 seconds
-//        print("in subtitle = %@",subtitles!)
-//    }
     
     @IBAction func onPlay(_ sender: UIButton) {
         audioPlayer?.play()
@@ -170,3 +173,39 @@ extension VideoDetailVC: AVAudioPlayerDelegate {
         self.stopAll()
     }
 }
+
+//Video
+//    @IBAction func onPlay(_ sender: UIButton) {
+//
+//        // Video Player
+//        let videoURL = NSURL(string: videos[cellIndex!].videoURL)
+//        let player = AVPlayer(url: videoURL! as URL)
+//        let playerViewController = AVPlayerViewController()
+//        playerViewController.player = player
+//
+//        // Add subtitles
+//        let subtitleURL = NSURL(string: videos[cellIndex!].videoLyric)! as URL
+//        playerViewController.addSubtitles().open(file: subtitleURL)
+//        playerViewController.addSubtitles().open(file: subtitleURL, encoding: .utf8)
+//        // Text Properties
+//        playerViewController.subtitleLabel?.textColor = UIColor.red
+//
+//        // Play
+//        self.present(playerViewController, animated: true) {
+//            playerViewController.player!.play()
+//        }
+//    }
+//
+//    func subtitleParser() {
+//
+//        // Subtitle file
+//        let subtitleFile = Bundle.main.path(forResource: videos[cellIndex!].videoLyric, ofType: "srt")
+//        let subtitleURL = URL(fileURLWithPath: subtitleFile!)
+//
+//        // Subtitle parser
+//        let parser = Subtitles(file: subtitleURL, encoding: .utf8)
+//
+//        // Do something with result
+//        let subtitles = parser.searchSubtitles(at: 2.0) // Search subtitle at 2.0 seconds
+//        print("in subtitle = %@",subtitles!)
+//    }

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Karaoke/KaraokeLyricPlayerView.swift"
-            timestampString = "550378039.919082"
+            timestampString = "550379969.513327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Karaoke/KaraokeLyricPlayerView.swift"
-            timestampString = "550378039.91915"
+            timestampString = "550379969.513395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Karaoke/KaraokeLyricPlayerView.swift"
-            timestampString = "550378039.919197"
+            timestampString = "550379969.5134439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Karaoke/KaraokeLyricPlayerView.swift"
-            timestampString = "550378039.91924"
+            timestampString = "550379969.513489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
@@ -74,13 +74,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Karaoke/KaraokeLyricPlayerView.swift"
-            timestampString = "550378039.919282"
+            timestampString = "550379969.513532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
             endingLineNumber = "215"
             landmarkName = "prepareToPlay()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LearnBySongs/Controller/SplashVC.swift"
+            timestampString = "550379969.513577"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "goToMainView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LearnBySongs/Controller/SplashVC.swift"
+            timestampString = "550379969.513888"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "goToLoginView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LearnBySongs.SplashVC.goToLoginView() -&gt; ()"
+                  moduleName = "LearnBySongs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/long/Documents/GitHub/LearnBySongs/LearnBySongs/Controller/SplashVC.swift"
+                  timestampString = "550379969.723161"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LearnBySongs.SplashVC.goToLoginView() -&gt; ()"
+                  moduleName = "LearnBySongs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/long/Documents/GitHub/LearnBySongs/LearnBySongs/Controller/SplashVC.swift"
+                  timestampString = "550379969.724804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
