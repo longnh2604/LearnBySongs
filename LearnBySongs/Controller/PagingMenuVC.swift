@@ -17,7 +17,7 @@ class PagingMenuVC: UIViewController {
         // Load each of the view controllers you want to embed
         // from the storyboard.
         let storyboard = UIStoryboard(name: "Sub", bundle: nil)
-        let firstViewController = storyboard.instantiateViewController(withIdentifier: "VideoDetailVC")
+        let firstViewController = storyboard.instantiateViewController(withIdentifier: "SongDetailVC")
         let secondViewController = storyboard.instantiateViewController(withIdentifier: "NewWordsVC")
         
         // Initialize a FixedPagingViewController and pass

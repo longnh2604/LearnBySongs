@@ -17,8 +17,9 @@ class VideoDetailVC: UIViewController {
     var lyric:KaraokeLyric?
     private var timingKeys:Array<CGFloat> = [CGFloat]()
     
-    private var audioPlayer:AVAudioPlayer!
-    private var playerTimer:Timer?
+    var audioPlayer:AVAudioPlayer!
+    var playerView = AVPlayer()
+    var playerTimer:Timer?
     
     @IBOutlet weak var sliderSong: UISlider!
     @IBOutlet weak var lblTitle: UILabel!
@@ -93,21 +94,21 @@ class VideoDetailVC: UIViewController {
         
         lyricView.dataSource = self
         lyricView.delegate = self
-        
-        let songURL = downloadFile(url: videos[cellIndex!].videoURL)
 
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: songURL)
-            guard let player = audioPlayer else { return }
-            audioPlayer.delegate = self
-            player.prepareToPlay()
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        // Do any additional setup after loading the view, typically from a nib.
+//        let url = Bundle.main.url(forResource: "music", withExtension: "mp3")!
+//        do {
+//            audioPlayer = try AVAudioPlayer(contentsOf: url)
+//            guard let player = audioPlayer else { return }
+//
+//            player.prepareToPlay()
+//        } catch let error {
+//            print(error.localizedDescription)
+//        }
         
     }
     
-    func downloadFile(url:String)->URL {
+    func downloadFile(url:String)->URL? {
         var filePath: URL? = nil
         if let audioUrl = URL(string: url) {
             
@@ -169,9 +170,42 @@ class VideoDetailVC: UIViewController {
     }
     
     @IBAction func onPlay(_ sender: UIButton) {
-        audioPlayer?.play()
+        
+        let urlString = videos[cellIndex!].videoURL
+        guard let url = URL.init(string: urlString)
+            else {
+                return
+        }
+        let playerItem = AVPlayerItem.init(url: url)
+        playerView = AVPlayer.init(playerItem: playerItem)
+        playerView.play()
         lyricView.start()
         self.startTimer()
+
+        
+//        if let audioUrl = URL(string: videos[cellIndex!].videoURL) {
+//
+//            // then lets create your document folder url
+//            let documentsDirectoryURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//
+//            // lets create your destination file url
+//            print(documentsDirectoryURL)
+//            print(audioUrl.lastPathComponent)
+//            let destinationUrl = documentsDirectoryURL.appendingPathComponent(audioUrl.lastPathComponent)
+//
+//            do {
+//                audioPlayer = try AVAudioPlayer(contentsOf: destinationUrl)
+//
+//                guard let player = audioPlayer else { return }
+//
+//                player.prepareToPlay()
+//                player.play()
+//                lyricView.start()
+//                self.startTimer()
+//            } catch let error {
+//                print(error.localizedDescription)
+//            }
+//        }
     }
 }
 
