@@ -36,6 +36,20 @@ class SongDetailVC: UIViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear( _ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+        self.avPlayer = nil
+        self.timer?.invalidate()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let realm = RealmServices.shared.realm
+        videos = realm.objects(VideoData.self)
         
         cellIndex = GlobalVariables.sharedManager.cellIndex
         
@@ -54,12 +68,9 @@ class SongDetailVC: UIViewController  {
         lyricView.delegate = self
         
         lyricView.prepareToPlay()
-        isPaused = false
-        playButton.setImage(UIImage(named:"pause"), for: .normal)
+        isPaused = true
+        playButton.setImage(UIImage(named:"play"), for: .normal)
         self.playList.add("https://firebasestorage.googleapis.com/v0/b/learnbysongs-674e0.appspot.com/o/Songs%2FDaisukiDeshita-Erica.mp3?alt=media&token=89009783-94a7-49a9-85d5-2354df83bbc5")
-        self.play(url: URL(string:(playList[self.index] as! String))!)
-        self.setupTimer()
-        
     }
     
     func play(url:URL) {
@@ -70,21 +81,6 @@ class SongDetailVC: UIViewController  {
         avPlayer!.volume = 1.0
         avPlayer.play()
         lyricView.start()
-    }
-    
-    
-    override func viewWillDisappear( _ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
-        self.avPlayer = nil
-        self.timer?.invalidate()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let realm = RealmServices.shared.realm
-        videos = realm.objects(VideoData.self)
     }
     
     @IBAction func playButtonClicked(_ sender: UIButton) {
@@ -98,16 +94,24 @@ class SongDetailVC: UIViewController  {
     
     @available(iOS 10.0, *)
     func togglePlayPause() {
-        if avPlayer.timeControlStatus == .playing  {
-            playButton.setImage(UIImage(named:"play"), for: .normal)
-            avPlayer.pause()
-            lyricView.stop()
-            isPaused = true
-        } else {
+        if avPlayer == nil {
             playButton.setImage(UIImage(named:"pause"), for: .normal)
-            avPlayer.play()
-            lyricView.start()
+            self.play(url: URL(string:(playList[self.index] as! String))!)
             isPaused = false
+            self.setupTimer()
+        } else {
+            if avPlayer.timeControlStatus == .playing  {
+                playButton.setImage(UIImage(named:"play"), for: .normal)
+                avPlayer.pause()
+                lyricView.stop()
+                isPaused = true
+            } else {
+                playButton.setImage(UIImage(named:"pause"), for: .normal)
+                avPlayer.play()
+                lyricView.start()
+                isPaused = false
+                self.setupTimer()
+            }
         }
     }
     

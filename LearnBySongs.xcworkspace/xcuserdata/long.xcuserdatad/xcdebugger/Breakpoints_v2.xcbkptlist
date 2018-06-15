@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Controller/SongDetailVC.swift"
-            timestampString = "550661655.799692"
+            timestampString = "550745182.284398"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "lyricPlayerView(playerView:atIndex:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Controller/SongDetailVC.swift"
-            timestampString = "550661655.80005"
+            timestampString = "550745182.284464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "timesForLyricPlayerView(playerView:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
