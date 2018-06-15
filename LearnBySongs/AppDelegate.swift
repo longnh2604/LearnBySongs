@@ -45,13 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RealmServices.shared.deleteAll()
     
         //Setup Navigation bar
-        UINavigationBar.appearance().barTintColor = UIColor(red: 26/255, green: 188/255, blue: 156/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 255/255, green: 99/255, blue: 72/255, alpha: 1)
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Arial", size: 20)!]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         
         //Setup SlideMenu
-        SlideMenuOptions.leftViewWidth = kScreenSize.width * 0.8
+        SlideMenuOptions.leftViewWidth = kScreenSize.width * 0.5
         
         return true
     }

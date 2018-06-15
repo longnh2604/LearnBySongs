@@ -10,6 +10,7 @@ import UIKit
 
 class SideMenuCell: UITableViewCell {
 
+    //IBOutlet
     @IBOutlet weak var lblTitle: UILabel!
     
     override func awakeFromNib() {

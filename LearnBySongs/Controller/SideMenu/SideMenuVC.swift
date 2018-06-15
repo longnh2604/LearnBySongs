@@ -21,12 +21,14 @@ protocol LeftMenuProtocol : class {
 
 class SideMenuVC: UIViewController, LeftMenuProtocol {
     
+    //Variable
     var menus = ["Home", "Setting", "Logout"]
     var mainViewController: UIViewController!
     var settingViewController: UIViewController!
     var loginViewController: UIViewController!
     var users: Results<UserData>!
     
+    //IBOutlet
     @IBOutlet weak var tblSideMenu: UITableView!
     @IBOutlet weak var imvUser: UIImageView!
     @IBOutlet weak var lblUsername: UILabel!
@@ -55,8 +57,6 @@ class SideMenuVC: UIViewController, LeftMenuProtocol {
         setupUI()
     }
 
-    //MARK: - Load UI
-    /***************************************************************/
     func setupUI() {
         tblSideMenu.tableFooterView = UIView()
         tblSideMenu.delegate = self
@@ -89,8 +89,10 @@ class SideMenuVC: UIViewController, LeftMenuProtocol {
     }
 }
 
-//MARK: - Tableview Delegate, Datasource
-/***************************************************************/
+//*****************************************************************
+// MARK: - TableView
+//*****************************************************************
+
 extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -21,14 +21,14 @@ PODS:
   - FirebaseAnalytics (4.0.5):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
   - FirebaseAuth (4.4.1):
     - FirebaseAnalytics (~> 4.0)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.13):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseDatabase (4.1.3):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
@@ -38,13 +38,13 @@ PODS:
   - GoogleToolboxForMac/DebugUtils (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
     - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3)":
     - GoogleToolboxForMac/DebugUtils (= 2.1.3)
     - GoogleToolboxForMac/Defines (= 2.1.3)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.3)"
   - GTMSessionFetcher/Core (1.1.12)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
@@ -58,7 +58,9 @@ PODS:
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
+  - RevealingSplashView (0.5.0)
   - SlideMenuControllerSwift (4.0.0)
+  - TKSubmitTransition (2.0)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -67,7 +69,40 @@ DEPENDENCIES:
   - Firebase/Database
   - Parchment
   - RealmSwift
+  - RevealingSplashView
   - SlideMenuControllerSwift
+  - TKSubmitTransition (from `https://github.com/entotsu/TKSubmitTransition.git`, branch `swift4`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - leveldb-library
+    - nanopb
+    - Parchment
+    - Realm
+    - RealmSwift
+    - RevealingSplashView
+    - SlideMenuControllerSwift
+
+EXTERNAL SOURCES:
+  TKSubmitTransition:
+    :branch: swift4
+    :git: https://github.com/entotsu/TKSubmitTransition.git
+
+CHECKOUT OPTIONS:
+  TKSubmitTransition:
+    :commit: 29fac6072451a4def5cde567075bfc62a728bb1f
+    :git: https://github.com/entotsu/TKSubmitTransition.git
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -86,8 +121,10 @@ SPEC CHECKSUMS:
   Parchment: 63b6ec9f14fb54529fd2b9bf3e7537706364e163
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  RevealingSplashView: 0794eecad3a8983ac11a1fe474e9a9b51b926780
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+  TKSubmitTransition: 647b907508da58ba864141e3c4382442ec536d40
 
-PODFILE CHECKSUM: 0effd777da3ab4f1fb15b30b183063e68d51be91
+PODFILE CHECKSUM: 1987adea4ab52edb4153a9cc7114977e71057947
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0

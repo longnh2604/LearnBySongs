@@ -22,8 +22,10 @@ class BaseVC: UIViewController {
     
 }
 
-//MARK: - SlideMenuController Delegate
-/***************************************************************/
+//*****************************************************************
+// MARK: - SlideMenuController Delegate
+//*****************************************************************
+
 extension BaseVC : SlideMenuControllerDelegate {
     
     func leftWillOpen() {

@@ -12,6 +12,7 @@
 		520CBB049B01FE9B41EAF001 /* Pods_LearnBySongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */; };
 		FD3033D320CF547500D43F9A /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD3033D220CF547500D43F9A /* music.mp3 */; };
 		FD3033D920CFA08700D43F9A /* SongDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3033D820CFA08700D43F9A /* SongDetailVC.swift */; };
+		FD418BE720D39DB00057F368 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD418BE620D39DB00057F368 /* GradientView.swift */; };
 		FD43F03620D24C780046CBF8 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43F03520D24C780046CBF8 /* AudioPlayer.swift */; };
 		FD53E0AB20CE123600635F88 /* tri_ky.lrc in Resources */ = {isa = PBXBuildFile; fileRef = FD53E0AA20CE123600635F88 /* tri_ky.lrc */; };
 		FD5F22332059FDFF00623437 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F22322059FDFF00623437 /* SettingVC.swift */; };
@@ -61,6 +62,7 @@
 		B07E91C25C2CC252FD7B39A2 /* Pods-LearnBySongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnBySongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs.release.xcconfig"; sourceTree = "<group>"; };
 		FD3033D220CF547500D43F9A /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		FD3033D820CFA08700D43F9A /* SongDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailVC.swift; sourceTree = "<group>"; };
+		FD418BE620D39DB00057F368 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FD43F03520D24C780046CBF8 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		FD53E0AA20CE123600635F88 /* tri_ky.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tri_ky.lrc; sourceTree = "<group>"; };
 		FD5F22322059FDFF00623437 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
@@ -131,6 +133,22 @@
 				324FFB5E11A5AC80D38ED252 /* Pods_LearnBySongs.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD418BE420D35E080057F368 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A672058BCF300D1E949 /* SplashVC.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		FD418BE520D35E180057F368 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FDA47A692058BD0700D1E949 /* LoginVC.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		FD53E0A920CE122800635F88 /* Lyrics */ = {
@@ -210,6 +228,7 @@
 		FDA47A5D2058BAAA00D1E949 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FD418BE620D39DB00057F368 /* GradientView.swift */,
 				FDA47A8E20590EDF00D1E949 /* UIViewController.swift */,
 				FDA47A8C20590ECE00D1E949 /* UIApplication.swift */,
 				FDA47A8A20590EA500D1E949 /* ExSlideMenuController.swift */,
@@ -252,8 +271,8 @@
 		FDA47A652058BCA000D1E949 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FDA47A672058BCF300D1E949 /* SplashVC.swift */,
-				FDA47A692058BD0700D1E949 /* LoginVC.swift */,
+				FD418BE420D35E080057F368 /* Splash */,
+				FD418BE520D35E180057F368 /* Login */,
 				FD5F22342059FEFA00623437 /* Base */,
 				FDA47A8720590B9600D1E949 /* SideMenu */,
 				FD5F223B205A48E000623437 /* Main */,
@@ -302,7 +321,6 @@
 				FDA47A432058BA6400D1E949 /* Frameworks */,
 				FDA47A442058BA6400D1E949 /* Resources */,
 				8F6C7591ECDDBACE1AF89D85 /* [CP] Embed Pods Frameworks */,
-				77EF3B01CFAE144CE7380C0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,21 +390,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		77EF3B01CFAE144CE7380C0D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearnBySongs/Pods-LearnBySongs-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8F6C7591ECDDBACE1AF89D85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,7 +405,9 @@
 				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TKSubmitTransition/TKSubmitTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -416,7 +421,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKSubmitTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -482,6 +489,7 @@
 				FDA47A5C2058BAA500D1E949 /* SubtitlesHandler.swift in Sources */,
 				FDA47A8620590B9000D1E949 /* SideMenuVC.swift in Sources */,
 				FDA47A6A2058BD0700D1E949 /* LoginVC.swift in Sources */,
+				FD418BE720D39DB00057F368 /* GradientView.swift in Sources */,
 				FDA47A6C2058BD3500D1E949 /* Constant.swift in Sources */,
 				FDA47A8B20590EA500D1E949 /* ExSlideMenuController.swift in Sources */,
 			);
@@ -624,6 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YLSK83HY4;
 				INFOPLIST_FILE = LearnBySongs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Longnh.LearnBySongs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -640,6 +649,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YLSK83HY4;
 				INFOPLIST_FILE = LearnBySongs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Longnh.LearnBySongs;
 				PRODUCT_NAME = "$(TARGET_NAME)";

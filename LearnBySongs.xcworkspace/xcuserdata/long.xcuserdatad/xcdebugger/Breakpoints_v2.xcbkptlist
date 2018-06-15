@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnBySongs/Controller/VideoDetailVC.swift"
-            timestampString = "550661655.799615"
+            timestampString = "550742332.1908261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
@@ -47,8 +47,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
             endingLineNumber = "252"
-            landmarkName = "lyricPlayerView(playerView:atIndex:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -63,8 +63,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "timesForLyricPlayerView(playerView:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

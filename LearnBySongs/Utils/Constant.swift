@@ -24,4 +24,3 @@ let userDefaults = UserDefaults.standard
 let kScreenSize: CGSize = UIScreen.main.bounds.size
 
 //let slideMenuVC = ExSlideMenuController(mainViewController:naviMain, leftMenuViewController: kLeftMenuVC!)
-

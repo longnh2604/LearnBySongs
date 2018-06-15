@@ -1,5 +1,5 @@
 //
-//  SplashVC.swift
+//  LoginVC.swift
 //  LearnBySongs
 //
 //  Created by Long on 2018/03/14.
@@ -7,29 +7,17 @@
 //
 
 import UIKit
+import TKSubmitTransition
 
-class SplashVC: UIViewController {
+class LoginVC: UIViewController {
 
+    //IBOutlet
+    @IBOutlet weak var tfUsername: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var btnLogin: TKTransitionSubmitButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        checkLoginState()
-    }
-
-    func checkLoginState() {
-        if UserDefaults.standard.string(forKey: "LoginState") == "logined" {
-            userLogin() { success in
-                if (success) {
-                    self.goToMainView()
-                } else {
-                    self.popupAlert(title: nil, message: kLOGIN_FAILED)
-                }
-            }
-        } else {
-            delay(3.00) {
-                self.goToLoginView()
-            }
-        }
     }
     
     func goToMainView() {
@@ -46,15 +34,30 @@ class SplashVC: UIViewController {
                 let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
                 slideMenuController.delegate = mainViewController
                 
-                self.present(slideMenuController, animated: true, completion: nil)
+                self.btnLogin.startFinishAnimation(1, completion: {
+                    self.present(slideMenuController, animated: true, completion: nil)
+                })
+                
             } else {
                 self.popupAlert(title: nil, message: kGET_VIDEO_FAILED)
             }
         }
     }
     
-    func goToLoginView() {
-        let loginView =  self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-        self.present(loginView, animated: true, completion: nil)
+    //*****************************************************************
+    // MARK: - Actions
+    //*****************************************************************
+    
+    @IBAction func onNormalLogin(_ sender: UIButton) {
+        btnLogin.startLoadingAnimation()
+        userLogin() { success in
+            if (success) {
+                UserDefaults.standard.set("logined", forKey: "LoginState")
+                UserDefaults.standard.synchronize()
+                self.goToMainView()
+            } else {
+                self.popupAlert(title: nil, message: kLOGIN_FAILED)
+            }
+        }
     }
 }
