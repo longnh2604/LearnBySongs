@@ -50,7 +50,7 @@ fileprivate extension TransitionManager {
         updater.add(to: RunLoop.current, forMode: .commonModes)
     }
     
-    dynamic func updateTransitionProgress() {
+    @objc dynamic func updateTransitionProgress() {
         var progress = (updater.timestamp - startTime) / duration
         progress = min(1, progress)
         progress = max(0, progress)

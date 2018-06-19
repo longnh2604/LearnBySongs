@@ -10,15 +10,15 @@ import UIKit
 
 class MainPageVC: BasePageVC {
     
-    var firstPageVC : FirstPageVC?
+    var firstPageVC : UserViewController?
     var secondPageVC : SecondPageVC?
     
     lazy var orderedViewControllers: [UIViewController] = {
-        firstPageVC = self.newVc(viewController: "FirstPageVC") as? FirstPageVC
-        firstPageVC?.pass_data_callback = {
-            pass_data in
-            self.secondPageVC?.receive_data = pass_data
-        }
+        firstPageVC = self.newVc(viewController: "UserViewController") as? UserViewController
+//        firstPageVC?.pass_data_callback = {
+//            pass_data in
+//            self.secondPageVC?.receive_data = pass_data
+//        }
         secondPageVC = self.newVc(viewController: "SecondPageVC") as? SecondPageVC
         
         return [firstPageVC!,
