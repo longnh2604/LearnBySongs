@@ -49,7 +49,7 @@ class SplashVC: UIViewController {
             if (success) {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-                let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+                let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainPageVC") as! MainPageVC
                 let leftViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as! SideMenuVC
                 
                 let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)

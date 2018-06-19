@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - DisplaySwitcher (1.0.1)
   - FBSDKCoreKit (4.29.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.29.0):
@@ -63,6 +64,7 @@ PODS:
   - TKSubmitTransition (2.0)
 
 DEPENDENCIES:
+  - DisplaySwitcher
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -76,6 +78,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Bolts
+    - DisplaySwitcher
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -106,6 +109,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
   FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
   FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
@@ -125,6 +129,6 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   TKSubmitTransition: 647b907508da58ba864141e3c4382442ec536d40
 
-PODFILE CHECKSUM: 1987adea4ab52edb4153a9cc7114977e71057947
+PODFILE CHECKSUM: e18c96353e3cd1f5f42e8f64f6b36a228ab55ba2
 
 COCOAPODS: 1.5.0

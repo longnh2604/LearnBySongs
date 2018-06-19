@@ -23,4 +23,5 @@ pod 'RealmSwift'
 pod 'SlideMenuControllerSwift'
 pod 'Parchment'
 pod 'TKSubmitTransition', :git => 'https://github.com/entotsu/TKSubmitTransition.git', :branch => 'swift4'
+pod 'DisplaySwitcher'
 end

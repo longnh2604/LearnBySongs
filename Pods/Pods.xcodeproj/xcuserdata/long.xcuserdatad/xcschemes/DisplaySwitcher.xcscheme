@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A8FE9B68C2A8B40DE437FE66A0D41E0B"
-               BlueprintName = "TKSubmitTransition"
+               BlueprintIdentifier = "4B815F139829CD2C383A9E288DB6AF2D"
+               BlueprintName = "DisplaySwitcher"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "TKSubmitTransition.framework">
+               BuildableName = "DisplaySwitcher.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
