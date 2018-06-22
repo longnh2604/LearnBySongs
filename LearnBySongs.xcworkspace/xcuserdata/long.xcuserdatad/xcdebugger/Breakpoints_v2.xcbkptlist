@@ -90,7 +90,7 @@
                   moduleName = "LearnBySongs"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/long/Documents/GitHub/LearnBySongs/LearnBySongs/Controller/User.swift"
-                  timestampString = "551088967.981467"
+                  timestampString = "551172825.309217"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -105,7 +105,7 @@
                   moduleName = "LearnBySongs"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/long/Documents/GitHub/LearnBySongs/LearnBySongs/Controller/User.swift"
-                  timestampString = "551088967.985427"
+                  timestampString = "551172825.3113329"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -128,6 +128,70 @@
             startingLineNumber = "21"
             endingLineNumber = "21"
             landmarkName = "init(name:surname:avatar:postsCount:commentsCount:likesCount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Parchment/Parchment/Classes/PagingViewController.swift"
+            timestampString = "551168836.1171989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "529"
+            endingLineNumber = "529"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "551172824.801139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "openRight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "551172824.801247"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "openLeft()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LearnBySongs/Controller/Base/BasePageVC.swift"
+            timestampString = "551172824.801334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "leftWillOpen()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

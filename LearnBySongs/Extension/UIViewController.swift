@@ -18,7 +18,7 @@ extension UIViewController {
     }
     
     func addRightBarButton() {
-        self.addRigtBarButtonWithImage(UIImage(named: "sideMenuIcon")!, action: #selector(openPhotoVC))
+        self.addRightBarButtonWithImage(UIImage(named: "sideMenuIcon")!)
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addRightGestures()
     }
@@ -49,9 +49,5 @@ extension UIViewController {
     
     func dismissVC(sender: AnyObject){
         self.dismiss(animated: true)
-    }
-    
-    @objc func openPhotoVC() {
-        
     }
 }

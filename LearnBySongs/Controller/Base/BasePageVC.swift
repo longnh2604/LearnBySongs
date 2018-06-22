@@ -14,6 +14,7 @@ class BasePageVC: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addMenuBarButton()
+        addRightBarButton()
         removeTapRecognizer()
     }
     
@@ -86,6 +87,11 @@ extension BasePageVC : SlideMenuControllerDelegate {
     
     func rightDidClose() {
         print("SlideMenuControllerDelegate: rightDidClose")
+        
+    }
+    
+    func openReArrange() {
+        print("Rearrange")
         
     }
 }

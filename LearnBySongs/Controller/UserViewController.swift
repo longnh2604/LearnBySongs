@@ -51,6 +51,10 @@ class UserViewController: UIViewController {
         collectionView.register(UserCollectionViewCell.cellNib, forCellWithReuseIdentifier:UserCollectionViewCell.id)
     }
     
+    func openRightMenu() {
+        
+    }
+    
     // MARK: - Actions
     @IBAction func buttonTapped(_ sender: AnyObject) {
         if !isTransitionAvailable {
@@ -75,14 +79,15 @@ class UserViewController: UIViewController {
 
 }
 
-extension UserViewController {
+extension UserViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(videos.count)
         return videos.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCell.id, for: indexPath) as! UserCollectionViewCell
         if layoutState == .grid {
             cell.setupGridLayoutConstraints(1, cellWidth: cell.frame.width)
@@ -114,7 +119,7 @@ extension UserViewController {
     
 }
 
-extension UserViewController {
+extension UserViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 //        if searchText.isEmpty {

@@ -16,6 +16,7 @@ import UIKit
     @objc optional func rightDidOpen()
     @objc optional func rightWillClose()
     @objc optional func rightDidClose()
+    @objc optional func openReArrange()
 }
 
 public struct SlideMenuOptions {
@@ -235,6 +236,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     
     open override func openRight() {
         guard let _ = rightViewController else { // If rightViewController is nil, then return
+            self.delegate?.openReArrange?()
             return
         }
         
