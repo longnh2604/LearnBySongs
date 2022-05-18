@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // And will update the schema on disk automatically
                 }
         })
-        //test
+        //testaaa
         // Tell Realm to use this new configuration object for the default Realm
         Realm.Configuration.defaultConfiguration = config
         
